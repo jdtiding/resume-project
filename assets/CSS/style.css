@@ -10,6 +10,10 @@
     background-color: #fff;
 }
 
+.bg-color-personal-info {
+    background-color: #f4f4f4;
+}
+
 .ui-menu-color-home {
     background-color: #e67e62;
 }
@@ -38,6 +42,14 @@ h4 {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.default-text {
+    text-transform: none;
 }
 
 .general-sub {
@@ -212,4 +224,15 @@ footer {
 
 #footer-details {
     padding: 20px;
+}
+
+/*------------------------------Three reasons to hire me*/
+
+.three-reasons-icon {
+    font-size: 26px;
+    color: #e67e62;
+}
+
+.three-reasons-heading {
+    margin-bottom: 15px;
 }
