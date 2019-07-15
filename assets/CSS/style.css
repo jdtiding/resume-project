@@ -305,6 +305,10 @@ footer {
     margin-top: 25px;
 }
 
+.history-items {
+    margin: 30px;
+}
+
 .timeline-item {
     padding: 4em 2em 0em 2em;
     position: relative;
@@ -342,6 +346,3 @@ footer {
     background: #fafafa;
 }
 
-.history-items {
-    margin: 30px;
-}
