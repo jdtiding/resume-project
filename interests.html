@@ -222,10 +222,28 @@
         </div>
 
     </footer>
-    <!-- get API key from google -->
-    <script>
+    <!-- 3. rendering map -->
+<script>
+function initMap() {
+    var map = new.google.maps.Map(document.getElementById('div'), {
+        zoom: 3,
+        center: {
+            lat: 46.619261,
+            lng: -33.134766
+        }
+    });
+}
+</script>
+
+    <!-- 1. get API key from google -->
+    <!-- 2. copy this to the last script and delete the var-->
+    <!-- <script>
         var APIkey = "AIzaSyBSU_0Yta9nNK3MMb2gVBv_kSkO6xVN3Tg";
-    </script>
+    </script> -->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSU_0Yta9nNK3MMb2gVBv_kSkO6xVN3Tg&callback=initMap">
+        </script>
 
 </body>
 
