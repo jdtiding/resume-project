@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css"
+        type="text/css" />
     <link rel="stylesheet" href="assets/CSS/style.css" type="text/css" />
 
     <title>Rosie</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_b9E3OGfETDNOuGWIYTDRo");
+            //delete - it is only for testing if it works
+            // emailjs.send("gmail", "rosie", { name: 'Jolanta', notes: 'The project that I want is...' })
+        })();
+    </script>
 </head>
 
 <body>
@@ -28,22 +40,28 @@
                     <div class="col">
                         <ul id="nav" class="list-inline menucontainer">
                             <li class="col-6 col-sm-2 ui-menu-color-home list-inline-item menuitem">
-                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-home aria-hidden=true"></i><span>Home</span></a>
+                                <a href="index.html" class="hvr-sweep-to-bottom"><i
+                                        class="fa fa-home aria-hidden=true"></i><span>Home</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-resume list-inline-item menuitem">
-                                <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa fa-graduation-cap aria-hidden=true"></i><span>Resume</span></a>
+                                <a href="resume.html" class="hvr-sweep-to-bottom"><i
+                                        class="fa fa-graduation-cap aria-hidden=true"></i><span>Resume</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-contact list-inline-item menuitem">
-                                <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa fa-comment-o aria-hidden=true"></i><span>Contact</span></a>
+                                <a href="contact.html" class="hvr-sweep-to-bottom"><i
+                                        class="fa fa-comment-o aria-hidden=true"></i><span>Contact</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-interests list-inline-item menuitem">
-                                <a href="interests.html" class="hvr-sweep-to-bottom"><i class="fa fa-users" aria-hidden="true"></i><span>Interests</span></a>
+                                <a href="interests.html" class="hvr-sweep-to-bottom"><i class="fa fa-users"
+                                        aria-hidden="true"></i><span>Interests</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-github list-inline-item menuitem">
-                                <a href="github.html" class="hvr-sweep-to-bottom"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+                                <a href="github.html" class="hvr-sweep-to-bottom"><i class="fa fa-github"
+                                        aria-hidden="true"></i><span>GitHub</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-download list-inline-item menuitem">
-                                <a href="assets/cv/sample-cv.pdf" target="_blank" class="hvr-sweep-to-bottom"><i class="fa fa-download aria-hidden=true"></i><span>Download</span></a>
+                                <a href="assets/cv/sample-cv.pdf" target="_blank" class="hvr-sweep-to-bottom"><i
+                                        class="fa fa-download aria-hidden=true"></i><span>Download</span></a>
                             </li>
                         </ul>
                     </div>
@@ -57,10 +75,12 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
                 <h5 class="uppercase text-center">Let's work together.</h5>
                 <div class="center-form">
-                    <form>
+                    <form onSubmit="return sendEmail(this);" method="POST">
                         <input name="name" id="fullname" type="text" class="form-control" placeholder="Name" required>
-                        <input name="email" id="emailaddress" type="email" class="form-control" placeholder="Email" required>
-                        <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Project description" required></textarea>
+                        <input name="email" id="emailaddress" type="email" class="form-control" placeholder="Email"
+                            required>
+                        <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control"
+                            placeholder="Project description" required></textarea>
                         <div class="row text-center">
                             <div class="col">
                                 <button type="submit" class="btn btn-secondary">Send Project Request</button>
@@ -77,7 +97,8 @@
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">About</h5>
                 <p class="inline-block">
-                    Full Stack Web Developer. Skilled in everything from HTML to Heroku. The capacity for structural and design thinking.
+                    Full Stack Web Developer. Skilled in everything from HTML to Heroku. The capacity for structural and
+                    design thinking.
                 </p>
             </div>
 
@@ -136,6 +157,7 @@
 
         </div>
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
